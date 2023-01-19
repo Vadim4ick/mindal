@@ -1,0 +1,165 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+h1 {
+  font-family: "Azbuka04";
+  @include adaptiveValue("font-size", 64, 36);
+  line-height: math.div(70, 64);
+  letter-spacing: 0.02em;
+  color: #000000;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Azbuka04";
+  @include adaptiveValue("font-size", 48, 36);
+  line-height: math.div(52, 48);
+  color: #000000;
+}
+
+h3 {
+  font-family: "Comfortaa";
+  font-weight: 700;
+  @include adaptiveValue("font-size", 32, 20);
+  line-height: math.div(32, 32);
+  text-transform: uppercase;
+  color: #000000;
+}
+
+p {
+  font-family: "Comfortaa";
+  line-height: math.div(24, 16);
+  color: #000000;
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+#specialists .specialists-our__container {
+  max-width: rem(850);
+}
+#specialists .specialists-our__people {
+  @media (max-width: $mobileSmall) {
+    grid-template-columns: 1fr;
+    padding: rem(0) rem(35);
+  }
+}
+#specialists.specialists-our {
+  @include adaptiveValue("padding-top", 190, 150);
+}
+#services.our-services {
+  @include adaptiveValue("padding-top", 190, 150);
+}
+
+#main-header .header__logo {
+  @media (max-width: $tablet) {
+    display: block;
+    img {
+      max-width: rem(89);
+      max-height: rem(47);
+    }
+
+    .menu-open & {
+      display: none;
+    }
+  }
+}
+#main-header .header__logo_black {
+  @media (max-width: $tablet) {
+    display: none;
+
+    .menu-open & {
+      display: block;
+    }
+  }
+}
+
+.break {
+  display: block;
+  @media (max-width: $mobileSmall) {
+    display: none;
+  }
+}
+
+.break-mobile {
+  display: none;
+  @media (max-width: $mobileSmall) {
+    display: block;
+  }
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  background-color: #fff;
+}
+
+.fixed-main {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.phone {
+  padding: rem(11);
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.phone2 {
+  padding: rem(11);
+  border: 1px solid #000000;
+  border-radius: 50%;
+
+  @media (max-width: $tablet) {
+    padding: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.menu__phone a {
+  position: relative;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: #000000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+
+    background-color: #000000;
+  }
+}
+
+.menu__phone {
+  margin-top: rem(80);
+}

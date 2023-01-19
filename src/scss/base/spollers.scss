@@ -1,0 +1,93 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.services-spollers {
+  display: grid;
+  @include adaptiveValue("margin-bottom", 100, 40);
+  //Спойлер
+  &__item {
+    padding: rem(30) 0;
+    border-bottom: rem(2) solid #2a461f;
+    background-color: white;
+    &:first-child {
+      border-top: rem(2) solid #2a461f;
+    }
+  }
+
+  // Заголовок спойлера
+  &__title {
+    width: 100%;
+    cursor: default;
+    text-align: left;
+    position: relative;
+    padding-right: rem(50);
+    ._spoller-init & {
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        background-color: #2a461f;
+        height: 2px;
+        @include adaptiveValue("width", 20, 18);
+        transition: transform 0.5s ease 0s;
+        transition: all 0.3s ease 0s;
+      }
+      &::before {
+        transform: translate(-75%, -50%) rotate(40deg);
+      }
+      &::after {
+        transform: translate(0, -50%) rotate(-40deg);
+      }
+      &._spoller-active {
+        &::before {
+          transform: translateX(-75%) rotate(-40deg);
+        }
+        &::after {
+          transform: rotate(40deg);
+        }
+      }
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        ._spoller-init & {
+          &::before,
+          &::after {
+            background-color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  &__body {
+    margin-top: rem(30);
+
+    line-height: math.div(24, 16);
+    color: #1d1e1c;
+
+    li {
+      list-style-type: disc;
+    }
+
+    ul {
+      padding-left: rem(20);
+    }
+  }
+
+  &__services {
+    margin-top: rem(30);
+    display: flex;
+    justify-content: space-between;
+    gap: rem(10);
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}

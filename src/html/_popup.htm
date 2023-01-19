@@ -1,0 +1,111 @@
+<div id="popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content form-application">
+      <button data-close type="button" class="popup__close">
+        <img src="img/close.png" alt="" />
+      </button>
+      <div class="popup__form form-application">
+        <div class="form-application__container">
+          <div class="form-application__content">
+            <div class="form-application__header">
+              <h3>Заявка</h3>
+              <p>
+                Оставьте ваши контакты и наш менеджер свяжется с вами в
+                ближайшее время
+              </p>
+            </div>
+            <div class="form-application__body">
+              <form
+                data-ajax
+                data-popup-message="#popup2"
+                class="form"
+                method="post"
+                action="files/telegram.php"
+              >
+                <div class="form__body">
+                  <div class="form__item">
+                    <label class="form__label">Ваше имя</label>
+
+                    <input
+                      id="formInp1"
+                      autocomplete="off"
+                      type="text"
+                      name="name"
+                      data-required="text"
+                      data-error=""
+                      placeholder="Иван Иванов"
+                      class="form__inp input js-input"
+                    />
+                  </div>
+
+                  <div class="form__item">
+                    <label class="form__label">Ваш телефон</label>
+
+                    <input
+                      id="formInp3"
+                      autocomplete="off"
+                      type="tel"
+                      name="phone"
+                      data-required="number"
+                      data-error=""
+                      placeholder="+7 (000) 000-00-00"
+                      class="form__inp input js-input"
+                    />
+                  </div>
+                  <div class="form__item">
+                    <label class="form__label">Почта</label>
+
+                    <input
+                      id="formInp2"
+                      autocomplete="off"
+                      type="email"
+                      name="email"
+                      data-required="email"
+                      data-error=""
+                      placeholder="mail@mail.ru"
+                      class="form__inp input js-input"
+                    />
+                  </div>
+                  <div class="form__approval">
+                    <input
+                      id="form__c1"
+                      data-error=""
+                      class="checkbox__input js-input-checkbox"
+                      type="checkbox"
+                      value="1"
+                      data-required
+                      name="form[]"
+                    />
+
+                    <label class="checkbox__label">
+                      <span class="checkbox__text"
+                        >Я согласен на обработку персональных данных</span
+                      >
+                    </label>
+                  </div>
+                  <button type="submit" class="form__button btn">
+                    Записаться
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="popup2" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content form-application">
+      <button data-close type="button" class="popup__close">
+        <img src="img/close.png" alt="" />
+      </button>
+      <div class="popup__content2">
+        <img src="img/success.svg" alt="" />
+        <p>Ваша заявка успешно отправлена!</p>
+      </div>
+    </div>
+  </div>
+</div>

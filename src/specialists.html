@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Специалисты" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section id="specialists" class="our__specialists specialists-our">
+          <div class="specialists-our__container">
+            <div class="specialists-our__title">
+              <h1>Наши специалисты</h1>
+            </div>
+
+            <div class="specialists-our__body">
+              <div class="specialists-our__people people-specialists">
+                <div class="people-specialists__cart">
+                  <div class="people-specialists__content">
+                    <img src="img/specialists/3.png" alt="" />
+                    <!-- <div class="people-specialists__image-ibg">
+                      <img src="img/specialists/1.png" alt="" />
+                    </div> -->
+                    <span>Нестеренко Яна</span>
+                  </div>
+                  <div class="people-specialists__text">
+                    <p>
+                      СПА-специалист, косметик-эстетист с медицинским
+                      образованием. Опытный специалист в области СПА-технологий
+                      и массажа. Специализируется на массаже лица и разбору
+                      косметических средств. Авторская техника пластического
+                      массажа включает в себя всё самое эффективное и
+                      действенное из различных массажных направлений.
+                    </p>
+                  </div>
+                </div>
+                <div class="people-specialists__cart">
+                  <div class="people-specialists__content">
+                    <img src="img/specialists/4.png" alt="" />
+                    <!-- <div class="people-specialists__image-ibg">
+                      <img src="img/specialists/2.png" alt="" />
+                    </div> -->
+
+                    <span>Белозерова Елена</span>
+                  </div>
+
+                  <div class="people-specialists__text">
+                    <p>
+                      Косметолог с медицинским образованием. Стаж в косметологии
+                      8 лет. Чистки, пилинг, инъекционная косметология,
+                      аппаратная косметология .
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="specialists-our__btn">
+                <a data-popup="#popup" href="#" class="btn">Записаться</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>
